@@ -1,0 +1,9 @@
+tsc --init
+make sample.ts
+
+1. tasks: Run Build Task
+   tsc:build - tsconfig.json
+
+OR
+
+2. using terminal, type tsc
