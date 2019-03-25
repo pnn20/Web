@@ -1,12 +1,27 @@
 "use strict";
-var tonio = {
+/*
+interface Person {
+    name: string,
+    age: number
+}
+
+interface Animal {
+    name: string,
+    animal_type: 'cat' | 'dog'
+}
+
+type PersonOrAnimal = Person | Animal
+
+const tonio: Person = {
     name: 'Tonio',
     age: 26
 };
-var toniosCat = {
+
+const toniosCat: Animal = {
     name: 'Nala',
     animal_type: 'cat'
 };
+*/
 /*
 // Example function
 const printName = (toBePrint: PersonOrAnimal) => console.log(toBePrint.name);
@@ -31,25 +46,29 @@ const printTypeIfAnimalHumanOtherwise_incorrect_bis = (toBePrinted: PersonOrAnim
     }
 }
 */
-var printTypeIfAnimalHumanOtherwise_incorrect_bis = function (toBePrinted) {
-    if (toBePrinted.animal_type) {
+/*
+const printTypeIfAnimalHumanOtherwise_incorrect_bis = (toBePrinted: PersonOrAnimal) => {
+    if ((toBePrinted as Animal).animal_type) {
         console.log("animal");
+    } else {
+        console.log("person")
     }
-    else {
-        console.log("person");
-    }
-    if (toBePrinted.animal_type == 'cat') {
+
+    if ((toBePrinted as Animal).animal_type == 'cat') {
         console.log("cat");
-    }
-    else if (toBePrinted.animal_type == 'dog') {
+    } else if ((toBePrinted as Animal).animal_type == 'dog') {
         console.log("dog");
     }
-    if (toBePrinted) {
-        console.log("Type Assertion(Animal)");
+    
+    if (toBePrinted as Animal) {
+        console.log("Type Assertion(Animal)")
     }
-    if (toBePrinted) {
-        console.log("Type Assertion(Person)");
+    
+    if (toBePrinted as Person) {
+        console.log("Type Assertion(Person)")
     }
-};
+}
+
 printTypeIfAnimalHumanOtherwise_incorrect_bis(tonio);
 printTypeIfAnimalHumanOtherwise_incorrect_bis(toniosCat);
+*/ 

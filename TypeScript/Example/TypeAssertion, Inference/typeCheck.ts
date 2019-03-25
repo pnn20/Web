@@ -1,4 +1,4 @@
-
+/*
 interface Person {
     name: string,
     age: number
@@ -20,6 +20,7 @@ const toniosCat: Animal = {
     name: 'Nala',
     animal_type: 'cat'
 };
+*/
 /*
 // Example function
 const printName = (toBePrint: PersonOrAnimal) => console.log(toBePrint.name);
@@ -44,7 +45,7 @@ const printTypeIfAnimalHumanOtherwise_incorrect_bis = (toBePrinted: PersonOrAnim
     }
 }
 */
-
+/*
 const printTypeIfAnimalHumanOtherwise_incorrect_bis = (toBePrinted: PersonOrAnimal) => {
     if ((toBePrinted as Animal).animal_type) {
         console.log("animal");
@@ -69,3 +70,4 @@ const printTypeIfAnimalHumanOtherwise_incorrect_bis = (toBePrinted: PersonOrAnim
 
 printTypeIfAnimalHumanOtherwise_incorrect_bis(tonio);
 printTypeIfAnimalHumanOtherwise_incorrect_bis(toniosCat);
+*/
