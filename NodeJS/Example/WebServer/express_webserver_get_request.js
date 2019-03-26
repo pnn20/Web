@@ -4,16 +4,15 @@ var app = express();
 
 app.use(function(req, res, next) {
     console.log('first middle ware');
-    req.user = 'mike';
-    //res.send({name:'girls generation', age:20});
-    next();
-});
 
-app.use('/', function(req, res, next) {
-    console.log('second middle ware');
+    var userAgent = req.header('User-Agent');
+    var paramName = req.query.name;
 
     res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
-    res.end('<h1>Express Server ' + req.user + ' response.</h1>');
+    res.write('<h1>Express Server response.</h1>');
+    res.write('<div><p>User-Agent : ' + userAgent + '</p></div>');
+    res.write('<div><p>Param name : ' + paramName + '</p></div>');
+    res.end();
 });
 
 app.set('port', process.env.PORT || 3000);
