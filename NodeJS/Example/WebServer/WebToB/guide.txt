@@ -1,0 +1,6 @@
+config 파일 수정시 webTobe/config에서 wscfl -i http.m 컴파일 wsconfig 생성
+wsboot <- webTobe 실행
+
+// Web Server에 VHost로 Main Port가 아닌 Sub Port를 열어 여러개의 서버를 연결할 수 있다.
+// 4500 Port의 Http Server 1개, 5500, 6500 Port로 WebSocket을 열어둔 서버가 2개가 있는데
+// 각각 Reverse Proxy를 4000, 5000, 6000으로 설정하였으므로 브라우져를 통한 접근은 해당 Port로 진행해야 한다.

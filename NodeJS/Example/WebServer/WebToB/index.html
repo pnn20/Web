@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            var ws1 = new WebSocket('ws://192.168.13.120:5500');
+            var ws2 = new WebSocket('ws://192.168.13.120:6500');
+            ws1.onopen = function(event) {
+                ws1.send('openopen!');
+            }
+            ws1.onmessage = function(event) {
+                console.log(event);
+            }
+            
+            ws2.open = function(event) {
+                ws2.send('openopen!');
+            }
+            ws2.onmessage = function(event) {
+                console.log(event);
+            }        
+        </script>
+    </head>
+    <body>
+        <table>
+            <thead>
+            </thead>
+            <tbody>                
+            </tbody>
+        </table>
+    </body>
+</html>
