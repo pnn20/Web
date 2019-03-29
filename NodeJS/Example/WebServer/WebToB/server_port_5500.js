@@ -10,5 +10,3 @@ wws.on('connection', ws => {
         ws.send('WebSocket Connected! PORT : 5500');
     }, 2000);
 })
-
-
